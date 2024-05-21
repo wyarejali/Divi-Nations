@@ -1,0 +1,34 @@
+/* Divi Nations Folder Color */
+.et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nations.et_pb_folder,
+.et-db #et-boc .et-fb-modules-list li[class^='dina'],
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] {
+    background: linear-gradient(
+        120deg,
+        #020024 0%,
+        #090979 35%,
+        #00d4ff 100%
+    ) !important;
+    color: #fff !important;
+}
+
+.et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nations.et_pb_folder:hover,
+.et-db #et-boc .et-fb-modules-list li[class^='dina']:hover,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina']:hover {
+    background: linear-gradient(
+        145deg,
+        #020024 0%,
+        #090979 35%,
+        #00d4ff 100%
+    ) !important;
+}
+
+.et-db #et-boc .et-fb-modules-list li[class^='dina'] .et-fb-icon,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] .et-fb-icon {
+    margin: 0 !important;
+}
+
+.et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nations.et_pb_folder:before {
+    content: url(../../icons/divi-nations-dashboard.png) !important;
+    font-family: none !important;
+    color: #00bae3 !important;
+}

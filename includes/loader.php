@@ -4,6 +4,7 @@ if ( ! class_exists( 'ET_Builder_Element' ) ) {
 	return;
 }
 
+require_once DINA_DIVI_NATIONS_DIR . 'includes/modules/DiviNationsCore/DiviNationsCore.php';
 $module_files = glob( __DIR__ . '/modules/*/*.php' );
 
 // Load custom Divi Builder modules
