@@ -5,7 +5,7 @@ jQuery(function($) {
     var subtitle = 'Your subtitle goes here...';
     var content =
         'Your content goes here. Edit or remove this text inline or in the module content settings.';
-
+    const icon = '&#xe105;||divi||400';
     var is_vb = $('body').hasClass('et-fb');
 
     $(window).on('load', function() {
@@ -16,7 +16,7 @@ jQuery(function($) {
                 image: defaultImage,
             }),
             (window.ETBuilderBackend.defaults.dina_pricelist_item = {
-                icon: '&#x57;||divi||400',
+                icon: '&#xe0f3;||divi||400',
                 image: defaultImage,
                 title: 'Price Title',
                 price: '$49.99',
@@ -37,6 +37,10 @@ jQuery(function($) {
                 back_title: title,
                 back_subtitle: subtitle,
                 back_description: content,
+            }),
+            (window.ETBuilderBackend.defaults.dina_icon_list_item = {
+                icon: '&#xe052;||divi||400',
+                title: title,
             }));
     });
 });

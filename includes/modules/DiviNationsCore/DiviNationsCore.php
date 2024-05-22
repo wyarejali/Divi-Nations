@@ -38,6 +38,7 @@ class DINA_Divi_Nations_Modules_Core extends ET_Builder_Module {
             'property'    => '',
             'selector'    => '',
             'hover'       => '',
+            'default'     => '',
             'important'   => false
         );
 
@@ -48,6 +49,13 @@ class DINA_Divi_Nations_Modules_Core extends ET_Builder_Module {
         $desktop = $module->props[$option_slug];
         $tablet  = $module->props[$option_slug . '_tablet'] ? $module->props[$option_slug . '_tablet']: '';
         $phone   = $module->props[$option_slug . '_phone'] ? $module->props[$option_slug . '_phone'] : '';
+
+        if($options['default'] !== '') {
+            ET_Builder_Element::set_style($render_slug, array(
+                'selector' => $options['selector'],
+                'declaration' => $options['default'],
+            ));
+        }
 
         if (class_exists('ET_Builder_Element')) {
             if (isset($desktop) && !empty($desktop)) {

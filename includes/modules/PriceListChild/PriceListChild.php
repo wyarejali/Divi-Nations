@@ -77,7 +77,6 @@ class DINA_PriceList_item extends DINA_Divi_Nations_Modules_Core {
                 'label'              => esc_html__( 'Select Icon', 'divi_nations' ),
                 'description'        => esc_html__( 'Select front side icon.', 'divi_nations' ),
                 'type'               => 'select_icon',
-                'default'            => '&#x57;||divi||400',
                 'toggle_slug'        => 'content',
                 'tab_slug'           => 'general',
                 'show_if'            => array(

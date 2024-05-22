@@ -1,0 +1,9 @@
+.dina_icon_list-item-container {
+    display: flex;
+    align-items: center;
+}
+
+.dina_icon_list-title {
+    margin: 0;
+    padding: 0;
+}
