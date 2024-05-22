@@ -24,7 +24,12 @@
 
 .et-db #et-boc .et-fb-modules-list li[class^='dina'] .et-fb-icon,
 .et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] .et-fb-icon {
-    margin: 0 !important;
+    margin: 0 auto !important;
+}
+
+.et-db #et-boc .et-fb-modules-list li[class^='dina'] svg,
+.et-db #et-boc .et-l .et-fb-modules-list li[class^='dina'] svg {
+    fill: transparent !important;
 }
 
 .et-db #et-boc .et-l .et-fb-modules-list li.Divi.Nations.et_pb_folder:before {

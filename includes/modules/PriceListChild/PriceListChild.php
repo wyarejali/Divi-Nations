@@ -14,7 +14,7 @@ class DINA_PriceList_item extends DINA_Divi_Nations_Modules_Core {
         $this->vb_support               = 'on';
         $this->type                     = 'child';
         $this->child_title_var          = 'title';
-        $this->child_title_fallback_var = 'admin_lable';
+        $this->child_title_fallback_var = 'admin_label';
         $this->main_css_element         = "%%order_class%%";
 
         $this->settings_modal_toggles = array(

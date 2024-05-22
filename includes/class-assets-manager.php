@@ -49,6 +49,14 @@ class Assets
                 'deps'    => ['jquery'],
                 'enqueue' => false
             ],
+
+            //Slick
+            'dina-slick' => [
+                'src'     => DINA_DIVI_NATIONS_URL . '/assets/lib/slick/slick.min.js',
+                'version' => filemtime(DINA_DIVI_NATIONS_PATH . '/assets/lib/slick/slick.min.js'),
+                'deps'    => ['jquery'],
+                'enqueue' => false
+            ],
             'dina-slick-logo-slider' => [
                 'src'     => DINA_DIVI_NATIONS_URL . '/assets/js/dina-slick-logo-slider.js',
                 'version' => filemtime(DINA_DIVI_NATIONS_PATH . '/assets/js/dina-slick-logo-slider.js'),
@@ -75,6 +83,13 @@ class Assets
             'global' => [
                 'src'     => DINA_DIVI_NATIONS_URL . '/assets/css/global.css',
                 'version' => filemtime(DINA_DIVI_NATIONS_PATH . '/assets/css/global.css'),
+                'enqueue' => true
+            ],
+
+            // Slick
+            'dina-slick' => [
+                'src'     => DINA_DIVI_NATIONS_URL . '/assets/lib/slick/slick.css',
+                'version' => filemtime(DINA_DIVI_NATIONS_PATH . '/assets/lib/slick/slick.css'),
                 'enqueue' => true
             ],
         ];

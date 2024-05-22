@@ -334,4 +334,113 @@ class DINA_Divi_Nations_Modules_Core extends ET_Builder_Module {
             )
         );
     }
+
+    public function render_prev_icon() {
+
+        // Inject Font Awesome Manually!.
+        dina_inject_fontawesome_icons($this->props['prev_icon']);
+
+        $icon_name = esc_attr(et_pb_process_font_icon($this->props['prev_icon']));
+
+        return sprintf(
+            '<button class="dina_slider_icon dina_prev_icon">
+                <i class="dina_icon">%1$s</i>
+            </button>',
+            $icon_name
+        );
+    }
+
+    public function render_next_icon() {
+
+        // Inject Font Awesome Manually!.
+        dina_inject_fontawesome_icons($this->props['next_icon']);
+
+        $icon_name = esc_attr(et_pb_process_font_icon($this->props['next_icon']));
+
+        return sprintf(
+            '<button class="dina_slider_icon dina_next_icon">
+                <i class="dina_icon">%1$s</i>
+            </button>',
+            $icon_name
+        );
+    }
+
+    public function check_on_off_options($option_name) {
+        if( $option_name ) {
+            return $option_name === 'on' ? true : false;
+        }
+    }
+
+    public function dina_get_slick_slider_settings() {
+
+        $autoplay            = $this->props['autoplay']      === 'on' ? true: false;
+        $autoplay_tablet     = $this->props['autoplay_tablet'] ? $this->check_on_off_options($this->props['autoplay_tablet']) : $autoplay;
+        $autoplay_phone      = $this->props['autoplay_phone'] ? $this->check_on_off_options($this->props['autoplay_phone']) : ( $autoplay_tablet ? $autoplay_tablet : $autoplay);
+        $autoplaySpeed       = intval($this->props['autoplay_delay']);
+        $dots                = $this->check_on_off_options($this->props['is_dots']);
+        $dots_tablet         = $this->props['is_dots_tablet'] ? $this->check_on_off_options($this->props['is_dots_tablet']) : $dots;
+        $dots_phone          = $this->props['is_dots_phone'] ? $this->check_on_off_options($this->props['is_dots_phone']) : ($dots_tablet ? $dots_tablet : $dots);
+        $arrows              = $this->check_on_off_options($this->props['is_arrows']);
+        $arrows_tablet       = $this->props['is_arrows_tablet'] ? $this->check_on_off_options($this->props['is_arrows_tablet']) : $arrows;
+        $arrows_phone        = $this->props['is_arrows_phone'] ? $this->check_on_off_options($this->props['is_arrows_phone']) : ($arrows_tablet ? $arrows_tablet : $arrows);
+        $centerMode          = $this->props['centered_mode'] === 'on' ? true: false;
+        $draggable           = $this->props['is_grab']       === 'on' ? true: false;
+        $easing              = 'linear';
+        $infinite            = $this->check_on_off_options($this->props['loop']);
+        $pauseOnHover        = $this->check_on_off_options($this->props['pause_on_hover']);
+        $rtl                 = $this->check_on_off_options($this->props['rtl']);
+        $slidesToScroll      = intval($this->props['slide_to_scroll']);
+        $slidesToShow        = intval($this->props['slide_to_show']);
+        $slidesToShow_tablet = intval($this->props['slide_to_show_tablet'] ? $this->props['slide_to_show_tablet'] : '2');
+        $slidesToShow_phone  = intval($this->props['slide_to_show_phone'] ? $this->props['slide_to_show_phone'] : '1');
+        $speed               = intval($this->props['slider_speed']);
+        $prevArrow           = $this->render_prev_icon();
+        $nextArrow           = $this->render_next_icon();
+        $spaceBetween        = $this->props['space_between'];
+        
+
+        $settings = [
+            'spaceBetween'   => $spaceBetween,
+            'dots'           => $dots,
+            'arrows'         => $arrows,
+            'autoplay'       => $autoplay,
+            'autoplaySpeed'  => $autoplaySpeed,
+            'centerMode'     => $centerMode,
+            'draggable'      => $draggable,
+            'infinite'       => $infinite,
+            'pauseOnHover'   => $pauseOnHover,
+            'rtl'            => $rtl,
+            'slidesToScroll' => $slidesToScroll,
+            'slidesToShow'   => $slidesToShow,
+            'speed'          => $speed,
+            'prevArrow'      => $prevArrow,
+            'nextArrow'      => $nextArrow,
+            'easing'         => $easing,
+            'responsive'     => [
+                
+                [
+                    'breakpoint' => 980,
+                    'settings'   => [
+                        'autoplay'     => $autoplay_tablet,
+                        'slidesToShow' => $slidesToShow_tablet,
+                        'dots'         => $dots_tablet,
+                        'arrows'       => $arrows_tablet,
+                    ],
+                ],
+                [
+                    'breakpoint' => 767,
+                    'settings'   => [
+                        'autoplay'     => $autoplay_phone,
+                        'slidesToShow' => $slidesToShow_phone,
+                        'dots'         => $dots_phone,
+                        'arrows'       => $arrows_phone,
+                    ],
+                ],
+            ]
+
+        ];
+
+        return  wp_json_encode($settings);
+    }
+
 }

@@ -12,7 +12,7 @@ jQuery(function($) {
         is_vb &&
             window.ETBuilderBackend &&
             window.ETBuilderBackend.defaults &&
-            (window.ETBuilderBackend.defaults.dina_logo_slider_child = {
+            ((window.ETBuilderBackend.defaults.dina_logo_slider_child = {
                 image: defaultImage,
             }),
             (window.ETBuilderBackend.defaults.dina_pricelist_item = {
@@ -37,6 +37,6 @@ jQuery(function($) {
                 back_title: title,
                 back_subtitle: subtitle,
                 back_description: content,
-            });
+            }));
     });
 });

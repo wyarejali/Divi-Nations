@@ -34,3 +34,7 @@
 .dian_slider_icon {
     border-style: solid;
 }
+
+body *[class^='dina'] {
+    border-style: solid;
+}

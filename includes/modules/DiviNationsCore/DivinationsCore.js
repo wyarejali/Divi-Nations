@@ -282,3 +282,109 @@ export const dinaGetCustomBgCSS = (
 export const checkOnOffOption = (optionName) => {
     return optionName === 'on' ? true : false;
 };
+
+/**
+ *
+ * @param {*} props
+ * @param {*} prevArrow
+ * @param {*} nextArrow
+ * @returns object
+ */
+export const dinaGetSlickSliderSettings = (props, prevArrow, nextArrow) => {
+    let dots = checkOnOffOption(props.is_dots),
+        dots_tablet = props.is_dots_tablet
+            ? checkOnOffOption(props.is_dots)
+            : dots,
+        dots_phone = props.is_dots_phone
+            ? checkOnOffOption(props.is_dots)
+            : dots_tablet || dots,
+        arrows = checkOnOffOption(props.is_arrows),
+        arrows_tablet = props.is_arrows_tablet
+            ? checkOnOffOption(props.is_arrows)
+            : arrows,
+        arrows_phone = props.is_arrows_phone
+            ? checkOnOffOption(props.is_arrows)
+            : arrows_tablet || arrows,
+        autoplay = checkOnOffOption(props.autoplay),
+        autoplay_tablet = props.autoplay_tablet
+            ? checkOnOffOption(props.autoplay)
+            : autoplay,
+        autoplay_phone = props.autoplay_phone
+            ? checkOnOffOption(props.autoplay)
+            : autoplay_tablet || autoplay,
+        autoplaySpeed = parseInt(props.autoplay_delay),
+        centerMode = checkOnOffOption(props.centered_mode),
+        draggable = checkOnOffOption(props.is_grab),
+        infinite = checkOnOffOption(props.loop),
+        pauseOnHover = checkOnOffOption(props.pause_on_hover),
+        rtl = checkOnOffOption(props.rtl),
+        slidesToScroll = parseInt(props.slide_to_scroll),
+        slidesToScrollTablet = props.slide_to_scroll_tablet
+            ? parseInt(props.slide_to_scroll_tablet)
+            : slidesToScroll,
+        slidesToScrollPhone = props.slide_to_scroll_phone
+            ? parseInt(props.slide_to_scroll_phone)
+            : slidesToScrollTablet || slidesToScroll,
+        slidesToShow = parseInt(props.slide_to_show),
+        slidesToShowTablet = props.slide_to_show_tablet
+            ? parseInt(props.slide_to_show_tablet)
+            : 2,
+        slidesToShowPhone = props.slide_to_show_phone
+            ? parseInt(props.slide_to_show_phone)
+            : 1,
+        speed = parseInt(props.slider_speed);
+    // arrows
+
+    const settings = {
+        dots,
+        arrows,
+        autoplay,
+        autoplaySpeed,
+        centerMode,
+        draggable,
+        infinite,
+        pauseOnHover,
+        rtl,
+        speed,
+        slidesToScroll,
+        slidesToShow,
+        prevArrow,
+        nextArrow,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    dots: dots_tablet,
+                    arrows: arrows_tablet,
+                    autoplay: autoplay_tablet,
+                    slidesToScroll: slidesToScrollTablet,
+                    slidesToShow: slidesToShowTablet,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    dots: dots_phone,
+                    arrows: arrows_phone,
+                    autoplay: autoplay_phone,
+                    slidesToScroll: slidesToScrollPhone,
+                    slidesToShow: slidesToShowPhone,
+                },
+            },
+        ],
+    };
+
+    return settings;
+};
+
+/**
+ *
+ * @param {string} icon
+ * @returns icon
+ */
+export const renderIcon = (icon) => {
+    const utils = window.ET_Builder.API.Utils;
+    const Icon = utils.processFontIcon(icon);
+
+    return Icon;
+};

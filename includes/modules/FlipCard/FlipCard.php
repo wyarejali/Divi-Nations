@@ -3,9 +3,9 @@
 class Flip_Card extends DINA_Divi_Nations_Modules_Core {
 
     protected $module_credits = array(
-        'module_uri' => DINA_DIVI_NATIONS_URL . '/modules/flip-card/',
+        'module_uri' => DIVI_NATIONS_BASE_URL . '/modules/flip-card/',
         'author'     => 'Divi Nations',
-        'author_uri' => DINA_DIVI_NATIONS_URL
+        'author_uri' => DIVI_NATIONS_BASE_URL
     );
 
     public function init() {

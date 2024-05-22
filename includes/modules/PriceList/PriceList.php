@@ -3,9 +3,9 @@
 class DINA_PriceList extends DINA_Divi_Nations_Modules_Core {
 
     protected $module_credits = array(
-        'module_uri' => 'https://divinasion/modules/image-accordion/',
+        'module_uri' => DIVI_NATIONS_BASE_URL . 'modules/image-accordion/',
         'author'     => 'Divi Nations',
-        'author_uri' => 'https://divinasion.com/',
+        'author_uri' => DIVI_NATIONS_BASE_URL,
     );
 
     public function init() {
