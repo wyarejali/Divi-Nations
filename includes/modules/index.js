@@ -1,5 +1,6 @@
 import AdvancedDivider from './AdvancedDivider/AdvancedDivider';
 import Flip_Card from './FlipCard/FlipCard';
+import IconBox from './IconBox/IconBox';
 import IconList from './IconList/IconList';
 import IconListChild from './IconListChild/IconListChild';
 import LogoSlider from './LogoSlider/LogoSlider';
@@ -16,4 +17,5 @@ export default [
     LogoSliderChild,
     IconList,
     IconListChild,
+    IconBox,
 ];

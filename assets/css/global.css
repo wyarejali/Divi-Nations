@@ -11,14 +11,15 @@
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     font-size: 96px;
-    display: inline-block;
+    display: block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     direction: ltr;
+    font-style: normal !important;
 }
 
-.dina_icon {
-    font-style: normal !important;
+.dina_btn {
+    display: inline-block;
 }
 
 .dina_flip_card-container,

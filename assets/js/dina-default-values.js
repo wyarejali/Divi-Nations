@@ -41,6 +41,12 @@ jQuery(function($) {
             (window.ETBuilderBackend.defaults.dina_icon_list_item = {
                 icon: '&#xe052;||divi||400',
                 title: title,
+            }),
+            (window.ETBuilderBackend.defaults.dina_icon_box = {
+                icon: '&#xe105;||divi||400',
+                title: title,
+                subtitle: subtitle,
+                description: content,
             }));
     });
 });

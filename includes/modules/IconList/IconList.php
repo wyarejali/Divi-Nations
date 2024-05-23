@@ -52,7 +52,7 @@ class DINA_Icon_List extends DINA_Divi_Nations_Modules_Core {
                 'mobile_options'  => true,
             ),
 
-        'vertical_align'         => array(
+            'vertical_align'         => array(
                 'label'          => esc_html__( 'Vartical Align', 'divi_nations' ),
                 'description'    => esc_html__( 'Define the content vertical alignement', 'divi_nations' ),
                 'type'           => 'select',

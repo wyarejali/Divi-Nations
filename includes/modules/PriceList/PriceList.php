@@ -26,8 +26,12 @@ class DINA_PriceList extends DINA_Divi_Nations_Modules_Core {
             ),
             'advanced'                      => array(
                 'toggles'                   => array(
+                    'layout'                => esc_html__( 'Layout', 'divi_nations' ),
+                    'icon'                  => esc_html__( 'Price Icon', 'divi_nations' ),
+                    'image'                 => esc_html__( 'Price Image', 'divi_nations' ),
+                    'item'                  => esc_html__( 'List Item', 'divi_nations' ),
                     'content'               => array(
-                        'title'             => esc_html__( 'Price Texts', 'divi_nations' ),
+                        'title'             => esc_html__( 'Price List Texts', 'divi_nations' ),
                         'tabbed_subtoggles' => true,
                         'sub_toggles'       => array(
                             'title'         => array(
@@ -41,9 +45,6 @@ class DINA_PriceList extends DINA_Divi_Nations_Modules_Core {
                             ),
                         )
                     ),
-                    'image'                 => esc_html__( 'Price Image', 'divi_nations' ),
-                    'icon'                  => esc_html__( 'Price Icon', 'divi_nations' ),
-                    'item'                  => esc_html__( 'List Item', 'divi_nations' ),
                 ),
             ),
         );
