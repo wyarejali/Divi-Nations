@@ -34,6 +34,29 @@ class DINA_Logo_Slider extends DINA_Divi_Nations_Modules_Core {
                 ),
             ),
         );
+
+        $this->custom_css_fields = array(
+			'slider_item'     => array(
+				'label'        => esc_html__( 'Slider Item', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_logo_slider-container img.dina_logo_slider-item',
+            ),
+			'left_arrow'     => array(
+				'label'        => esc_html__( 'Slider Left Arrow', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_slider_icon.dina_prev_icon .dina_icon',
+            ),
+			'right_arrow'     => array(
+				'label'        => esc_html__( 'Slider Right Arrow', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_slider_icon.dina_next_icon .dina_icon',
+            ),
+			'dots'     => array(
+				'label'        => esc_html__( 'Dots', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_logo_slider-container .slick-dots li button',
+            ),
+			'active_dots'     => array(
+				'label'        => esc_html__( 'Active Dot', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_logo_slider-container .slick-dots li.slick-active button',
+            ),
+        );
     }
 
 
@@ -228,8 +251,8 @@ class DINA_Logo_Slider extends DINA_Divi_Nations_Modules_Core {
                 'option_category' => 'basic_option',
                 'range_settings'  => array(
                     'step'        => 1,
-                    'min'         => 1,
-                    'max'         => 300,
+                    'min'         => 0,
+                    'max'         => 100,
                 ),
                 'default'         => '15px',
                 'default_unit'         => 'px',

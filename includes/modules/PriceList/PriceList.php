@@ -238,7 +238,7 @@ class DINA_PriceList extends DINA_Divi_Nations_Modules_Core {
                 'type'            => 'custom_margin',
                 'tab_slug'        => 'advanced',
                 'toggle_slug'     => 'image',
-                'default'         => '0px|0px|20px|0px',
+                'default'         => '0px|0px|0px|0px',
                 'mobile_options'  => true,
             ),
 

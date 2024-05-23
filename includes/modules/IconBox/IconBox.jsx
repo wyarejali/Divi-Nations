@@ -99,7 +99,7 @@ export class IconBox extends Component {
             this.render_description(this.props.description)
         ) {
             return (
-                <div className="dina_flip_card_content-wrapper">
+                <div className="dina_icon_box-content">
                     {this.render_title()}
                     {this.render_subtitle()}
                     {this.render_description(this.props.description)}

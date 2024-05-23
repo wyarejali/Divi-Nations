@@ -43,6 +43,33 @@ class DINA_Icon_Box extends DINA_Divi_Nations_Modules_Core {
                 ),
             ),
         );
+
+        $this->custom_css_fields = array(
+			'icon_wrapper'  => array(
+				'label'        => esc_html__( 'Icon Wrapper', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-icon',
+            ),
+			'icon'          => array(
+				'label'        => esc_html__( 'Icon', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-icon i.dina_icon',
+            ),
+			'title'         => array(
+				'label'        => esc_html__( 'Icon Box Title', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-content .dina_icon_box-title',
+            ),
+			'subtitle'         => array(
+				'label'        => esc_html__( 'Icon Box Subtitle', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-content .dina_icon_box-subtitle',
+            ),
+			'description'   => array(
+				'label'        => esc_html__( 'Description', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-content .dina_icon_box-description p',
+            ),
+			'button'   => array(
+				'label'        => esc_html__( 'Description', 'divi_nations' ),
+				'selector'     => '%%order_class%% .dina_icon_box-btn',
+            ),
+        );
     }
 
     public function get_fields() {
@@ -419,7 +446,7 @@ class DINA_Icon_Box extends DINA_Divi_Nations_Modules_Core {
     public function render_content()  {
         if ($this->render_title() || $this->render_subtitle() || $this->render_MCE($this->props[ 'description' ])) {
             return sprintf(
-                '<div class="dina_icon_box-content-wrapper">
+                '<div class="dina_icon_box-content">
                     %1$s
                     %2$s
                     <div class="dina_icon_box-description">%3$s</div> 

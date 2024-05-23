@@ -42,6 +42,7 @@ ul.slick-dots {
     display: flex !important;
     justify-content: center;
     gap: 10px;
+    list-style-type: none;
 }
 
 ul.slick-dots li button {
