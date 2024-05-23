@@ -222,7 +222,7 @@ class DINA_Logo_Slider extends DINA_Divi_Nations_Modules_Core {
                     'on'      => esc_html__('Yes', 'divi_nations'),
                     'off'     => esc_html__('No', 'divi_nations'),
                 ),
-                'default'     => 'on',
+                'default'     => 'off',
                 'toggle_slug' => 'navigation_settings',
                 'mobile_options'    => true,
             ),
@@ -410,20 +410,6 @@ class DINA_Logo_Slider extends DINA_Divi_Nations_Modules_Core {
                 'mobile_optios'     => true,
             ),
 
-            'dots_margin'         => array(
-                'label'                => esc_html__( 'Dots Margin', 'divi_nations' ),
-                'description'          => esc_html__( 'Define custom margin for arrow dots', 'divi_nations' ),
-                'type'                 => 'custom_margin',
-                'tab_slug'             => 'advanced',
-                'toggle_slug'          => 'dots',
-                'sub_toggle'           => 'back',
-                'default'              => '0px|0px|0px|0px',
-                'mobile_options'       => true,
-                'show_if'         => array(
-                    'is_dots'   => 'on'
-                ),
-                'mobile_optios'     => true,
-            ),
         );
 
         return array_merge($slider_settings, $controller, $slider, $arrows, $dots);
@@ -643,12 +629,6 @@ class DINA_Logo_Slider extends DINA_Divi_Nations_Modules_Core {
             'selector'      => '%%order_class%% .slick-dots li button',
         ));
 
-        $this->dina_set_responsive_css(array(
-            'render_slug'   => $render_slug,
-            'option_slug'   => 'dots_margin',
-            'property'      => 'height',
-            'selector'      => '%%order_class%% .slick-dots',
-        ));
    }
 }
 

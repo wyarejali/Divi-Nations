@@ -218,7 +218,7 @@ class DINA_Icon_Box extends DINA_Divi_Nations_Modules_Core {
             ),
 
             'icon_padding'       => array(
-                'label'          => esc_html__( 'Image/Icon Padding', 'divi_nations' ),
+                'label'          => esc_html__( 'Icon Padding', 'divi_nations' ),
                 'description'    => esc_html__( 'Define custom padding for icon', 'divi_nations' ),
                 'type'           => 'custom_padding',
                 'tab_slug'       => 'advanced',
@@ -228,12 +228,12 @@ class DINA_Icon_Box extends DINA_Divi_Nations_Modules_Core {
             ),
 
             'icon_margin'        => array(
-                'label'          => esc_html__( 'Image/Icon Margin', 'divi_nations' ),
+                'label'          => esc_html__( 'Icon Margin', 'divi_nations' ),
                 'description'    => esc_html__( 'Define custom margin for icon', 'divi_nations' ),
                 'type'           => 'custom_margin',
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'icon',
-                'default'        => '0px|0px|0px|0px',
+                'default'        => '0px|0px|10px|0px',
                 'mobile_options' => true,
             ),
         );

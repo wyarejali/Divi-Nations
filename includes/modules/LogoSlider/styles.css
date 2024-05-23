@@ -10,7 +10,7 @@
 /* arrows */
 .slick-arrow {
     position: absolute;
-    top: calc(50% - 15px);
+    top: 50%;
     transform: translateY(-50%);
     z-index: 10;
 }
@@ -36,13 +36,17 @@
 
 /* dots */
 ul.slick-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
     padding: 10px;
     list-style: none;
     display: flex !important;
     justify-content: center;
     gap: 10px;
-    list-style-type: none;
+    list-style-type: none !important;
 }
 
 ul.slick-dots li button {

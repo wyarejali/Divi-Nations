@@ -151,7 +151,7 @@ class DINA_Icon_List extends DINA_Divi_Nations_Modules_Core {
                 'type'           => 'custom_margin',
                 'tab_slug'       => 'advanced',
                 'toggle_slug'    => 'list_item',
-                'default'        => '0px|0px|0px|0px',
+                'default'        => '0px|0px|10px|0px',
                 'mobile_options' => true,
             ),
 
